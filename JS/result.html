@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <p class="browntext">Страница отзывов</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Age</th>
+                <th>Mail</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody id="result">
+
+        </tbody>
+    </table>
+    <script>
+        showContacts();
+    function showContacts(){
+        let str = "";
+        let local_contacts = JSON.parse(localStorage.getItem("Contacts"));
+        for(let i = 0; i < local_contacts.length; i++){
+            str += "<tr>" + "<td>" + local_contacts[i].name + "</td>" + "<td>" + local_contacts[i].number + "</td>" + "<td>" + local_contacts[i].age + "</td>" + "<td>" + local_contacts[i].mail + "</td>" + "<td>" + local_contacts[i].review + "</td>"  + "</tr>"; 
+        }
+        document.getElementById("result").innerHTML = str;
+
+    }
+
+    </script>
+
+</body>
+</html>

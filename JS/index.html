@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<body>
+<p class="header">Оставьте отзыв</p>
+<input class="inputs" type="text" placeholder="Name:" id="name"> <br>
+<input class="inputs" type="number" placeholder="Phone number:" id="number"> <br>
+<input class="inputs" type="number" placeholder="Age:" id="age"> <br> 
+<input class="inputs" type="text" placeholder="Mail address:" id="mail"> <br>
+<textarea class="review" type="text" placeholder="Your review: " id="review"></textarea> <br>
+<button class="inputs" onclick="add()">Оставить отзыв!</button>
+
+<div id="result"></div>
+
+<script>
+    let contacts = []
+    if (JSON.parse(localStorage.getItem("Contacts")) != null){
+        contacts = JSON.parse(localStorage.getItem("Contacts"));
+    }
+    function add(){
+        let name = document.getElementById("name").value;
+        let number = document.getElementById("number").value;
+        let age = document.getElementById("age").value;
+        let mail = document.getElementById("mail").value;
+        let review = document.getElementById("review").value;
+
+        if(name && number && age && mail && review){
+            contacts.push({
+                name: name,
+                number: number,
+                age: age,
+                mail: mail,
+                review: review
+            })
+            localStorage.setItem("Contacts", JSON.stringify(contacts))
+            document.getElementById("name").value = "";
+            document.getElementById("number").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("mail").value = "";
+            document.getElementById("review").value = "";
+        }
+    }
+    
+</script>
+
+</body>
+</html>
+</body>
+</html>

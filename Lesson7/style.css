@@ -1,0 +1,14 @@
+#info{
+    display: none;
+}
+.inputs {
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color:paleturquoise;
+    padding: 8px;
+}
+body{
+    text-align: center;
+    color:rgb(94, 17, 109);
+    background-color: palegreen;
+}

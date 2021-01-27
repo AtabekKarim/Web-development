@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js</title>
+</head>
+<body>
+    <div id="regis">
+        <h1>Registration</h1>
+        <input class ="inputs" type="text" id="name" placeholder="Enter name"> <br>
+        <input class ="inputs" type="text" id="surname" placeholder="Enter surname"> <br>
+        <input class="inputs" type="text" id="gmail" placeholder="Enter gmail"> <br>
+        <input class="inputs" type="number" id="age" placeholder="Enter age"> <br>
+        <input class="inputs" type="password" id="password" placeholder="Enter password"> <br>
+        <br>    <button style="color: green;" onclick="myFunc()" >Sign in</button> 
+    </div>
+    <div id="info">
+        <h1 id="info_fullname"></h1>
+        <p id="info_gmail"></p>
+        <p id="info_age"></p>
+    </div>
+    <script>
+    function myFunc(){
+        document.getElementById("regis").style.display = "none";
+        document.getElementById("info").style.display = "block";
+        let name = document.getElementById("name").value;
+        let surname = document.getElementById("surname").value;
+        let gmail = document.getElementById("gmail").value;
+        let age = document.getElementById("age").value;
+        let password = document.getElementById("password").value; 
+        document.getElementById("info_fullname").innerHTML = name + " " + surname;
+        document.getElementById("info_gmail").innerHTML= "Gmail: " + gmail;
+        document.getElementById("info_age").innerHTML= "Age: " + age;
+    }
+    </script>
+</body>
+</html>

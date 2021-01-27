@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="base"></h1>
+    <h3 id="date"></h3>  
+    <script>
+        let currentData;
+        getData();
+        async function getData(){
+            await fetch('https://official-joke-api.appspot.com/random_joke')  
+            .then(response => response.json())
+            .then(data => currentData = data);
+            console.log(currentData);
+            document.getElementById("base").innerHTML = "-" + currentData.setup;
+            document.getElementById("date").innerHTML = "-" + currentData.punchline;}
+    </script>
+</body>
+</html>

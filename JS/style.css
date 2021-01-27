@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+    background-color: beige;
+}
+.inputs{
+    background-color: rgb(255, 255, 255);
+    color: cornflowerblue;
+    border-radius: 70px;
+    width: 600px;
+    height: 50px;
+    border-width: 2px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.review{
+    resize: none;
+    margin-top: 10px;
+    width: 600px;
+    height: 200px;
+    border-radius: 50px;
+    font-size: 25px;
+    color: cornflowerblue;
+    outline: none;
+    padding-left: 30px;
+    border-width: 2px;
+    padding-top: 30px;
+}
+.header{
+    color: cornflowerblue;
+    font-size: 50px;
+}
+input:focus{
+    outline: none;
+}
+.browntext{
+    font-size: 20px;
+    color: cornflowerblue;
+    text-align: center;
+}
+ td, th{
+    border: 1px solid #000;
+    padding: 10px;
+    color: cornflowerblue;
+}
+
+table{
+    margin: auto;
+    width: 60%;
+    border-collapse: collapse;
+}
